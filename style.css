@@ -3,15 +3,15 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-li {
-    font-family: Arial, sans-serif;
     font-size: 20px;
     color: rgb(65, 64, 64);
+    background-color: #fbfbfb;
 }
 
+
+.photo {
+    border-radius: 50%;
+}
 
   
   .outer-container {
@@ -21,7 +21,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #ebe8e8;
     padding: 20px;
     margin-top: 0; /* Ensure no unnecessary margin at the top */
     padding-top: 50px; /* Use padding instead for spacing */
@@ -74,7 +74,7 @@ li {
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 30px solid lightgray;
+    border-top: 30px solid rgb(183, 182, 182);
     margin-top: 10px;
     margin-bottom: 50px;
     position: relative;
