@@ -1,0 +1,154 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+li {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: rgb(65, 64, 64);
+}
+
+
+  
+  .outer-container {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 0; /* Ensure no unnecessary margin at the top */
+    padding-top: 50px; /* Use padding instead for spacing */
+  }
+
+  
+  .inner-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border: solid #476e8c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+  
+
+  
+  .row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+
+ 
+  
+  .content-box {
+    width: 650px;
+    padding: 10px;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  /* Down arrow styling */
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid lightgray;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    position: relative;
+  
+  }
+
+
+ /* Play button styling */
+.play-button {
+    width: 80px;
+    height: 80px;
+    background-color: #476e8c;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3),
+                5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+  
+  .play-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(13, 150, 163, 0.6),
+                inset 1px 1px 3px rgba(0, 0, 0, 0.4),
+                8px 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Larger triangle inside the play button */
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 30px solid white;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    position: absolute;
+    left: 35%; /* Moves the triangle slightly to the right */
+  }
+
+/* Video popup overlay */
+.video-popup {
+    display: none; /* Ensure popup is hidden initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .video-popup-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .close-button:hover {
+    color: #ff00c8; /* Turns red when hovered */
+  }

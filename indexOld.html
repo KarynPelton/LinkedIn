@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    a {
+      color: #408aa8;
+      text-decoration: none;
+      font-size: 36px;
+    }
+
+    audio {
+      width: 220px;
+      display: block;
+      height: 20px;
+    }
+
+    html {
+      font-family: Arial, Helvetica, sans-serif;
+      /* background-image: url(Background.png);
+      background-size: cover; */
+      background-color: #5d9eb6;
+    }
+
+    h2 {
+      color: white;
+      font-size: 16px;
+    }
+
+    hr {
+      border-style: none;
+      border-top: 10px dotted white;
+      height: 5px;
+      width: 150px;
+      margin: 50px 0 20px 150px;
+    }
+
+    img {
+      border: black 1px solid;
+
+    }
+
+    p {
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .headerBlack {
+      color: black;
+      font-size: 20px;
+    }
+
+    .flex {
+      /* border: 30px solid black; */
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px;
+      /* padding: 10px; */
+      width: 1100px;
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    .column {
+      float: left;
+      margin: 0px 0px 50px 0px;
+      /*  height: 80px; Should be removed. Only for demonstration */
+    }
+
+    .column1 {
+      float: left;
+      margin: 0px 0px 50px 0px;
+      /*  height: 80px; Should be removed. Only for demonstration */
+    }
+
+    .left {
+      width: 20px;
+      padding: 10px;
+      margin: 0;
+    }
+
+    .right {
+      /* border: 10px solid red; */
+      width: 960px;
+      text-align: left;
+    }
+
+    .leftS3 {
+      width: 220px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 360px 5px 0px 20px;
+    }
+    .rightS3 {
+      width: 680px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 360px 5px 0px 10px;
+    }
+    .leftS4 {
+      width: 220px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 400px 5px 0px 20px;
+    }
+    .rightS4 {
+      width: 680px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 400px 5px 0px 10px;
+    }
+    .rowBorder {
+      height: 80px;
+      border: #3174b9 3px solid;
+      border-radius: 10px;
+      padding: 8px 0px 0px 0px;
+      margin: 340px 5px 0px 5px;
+    }
+    .left3 {
+      width: 220px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 0px 5px 0px 10px;
+    }
+    .right3 {
+      width: 680px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 0px 5px 0px 10px;
+    }
+    .leftS5 {
+      width: 220px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 410px 5px 0px 20px;
+    }
+    .rightS5 {
+      width: 680px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 410px 5px 0px 10px;
+    }
+    .leftS6 {
+      width: 220px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 410px 5px 0px 20px;
+    }
+    .rightS6 {
+      width: 680px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 410px 5px 0px 10px;
+    }
+    .leftS9 {
+      width: 320px;
+      height: 30px;
+      padding: 2px;
+      margin: 0 auto;
+      padding: 415px 0px 0px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+    .centerS9 {
+      width: 320px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 415px 0px 0px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+    .rightS9 {
+      width: 320px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 415px 0px 0px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+    .leftS10 {
+      width: 220px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 230px 5px 0px 70px;
+    }
+    .rightS10 {
+      width: 620px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 230px 5px 0px 10px;
+    }
+    .left2 {
+      width: 220px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 0px 5px 0px 20px;
+    }
+    .right2 {
+      width: 680px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 0px 5px 0px 10px;
+    }
+    .left9 {
+      width: 220px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 0px 5px 0px 70px;
+    }
+    .right9 {
+      width: 620px;
+      height: 30px;
+      padding: 2px;
+      margin: 0;
+      padding: 0px 5px 0px 10px;
+    }
+
+    .left2lines {
+      width: 220px;
+      height: 50px;
+      padding: 2px;
+      margin: 0;
+      padding: 0px 5px 0px 20px;
+    }
+    .right2lines {
+      width: 680px;
+      height: 50px;
+      padding: 2px;
+      margin: 0;
+      padding: 0px 5px 0px 10px;
+    }
+
+.row1{
+  height: 30px;
+}
+
+.row2{
+  height: 100px;
+}
+
+
+
+    .slide3 {
+      background-image: url(Slides/Slide3.png);
+      border: black 1px solid;
+      width: 960px;
+      height: 540px;
+    }
+
+    .slide4 {
+      background-image: url(Slides/Slide4.png);
+      border: black 1px solid;
+      width: 960px;
+      height: 540px;
+    }
+
+    .slide5 {
+      background-image: url(Slides/Slide5.png);
+      border: black 1px solid;
+      width: 960px;
+      height: 540px;
+    }
+
+    .slide6 {
+      background-image: url(Slides/Slide6.png);
+      border: black 1px solid;
+      width: 960px;
+      height: 540px;
+    }
+
+    .slide9 {
+      background-image: url(Slides/Slide9.png);
+      border: black 1px solid;
+      width: 960px;
+      height: 540px;
+    }
+
+    .slide10 {
+      background-image: url(Slides/Slide10.png);
+      border: black 1px solid;
+      width: 960px;
+      height: 540px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .red {
+      color: black;
+      font-weight: bold;
+    }
+
+    .blue {
+      color: black;
+      font-weight: bold;
+    }
+.MTABlue {
+  color: #3174b9;
+  font-weight: bold;
+}
+
+
+    .large {
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="flex">
+
+
+<!-- Slide 1 -->
+    <div class="row">
+      <div class="column left">
+        <h2 class="headerBlack">1</h2>
+      </div>
+      <div class="column right">
+            <img src="Slides/Slide1.png" alt="">
+      </div>
+    </div>
+<!-- Slide 1 End -->
+
+<!-- Slide 2 Start -->
+    <div class="row">
+      <div class="column left">
+        <h2 class="headerBlack">2</h2>
+      </div>
+      <div class="column right">
+            <img src="Slides/Slide2.png" alt="">
+      </div>
+    </div>
+<!-- Slide 2 End -->
+
+<!-- Slide 3 Start -->
+    <div class="row">
+      <div class="column left">
+        <h2 class="headerBlack">3</h2>
+      </div>
+      <div class="column right slide3">
+        <div class="row1">
+          <div class="column1 leftS3">
+            <!-- dynamic slide content start -->
+            <audio controls src="Comp - Questions Homework.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+          </div>
+          <div class="column1 rightS3">
+            <p><span class="red">Comp:</span> Did you do your homework? (&quot;have you gone over our plans?&quot;)</p>
+            <!-- dynamic slide content end-->
+          </div>
+        </div>
+        <div class="row1">
+          <div class="column1 left2">
+            <!-- dynamic slide content start -->
+            <audio controls src="Comp - Questions Order Taking.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+          </div>
+          <div class="column1 right2">
+            <p><span class="red">Comp:</span> Order taking (&quot;what plan do you want to buy?&quot;)</p>
+            <!-- dynamic slide content end-->
+          </div>
+        </div>
+        <div class="row1">
+          <div class="column1 left2">
+            <!-- dynamic slide content start -->
+            <audio controls src="Client - QQ Needs Close Ended.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+          </div>
+          <div class="column1 right2">
+            <p><span class="blue">Client:</span> Closed ended (preempts Customer from declaring needs the Rep has not stated)</p>
+            <!-- dynamic slide content end-->
+          </div>
+        </div>
+        <div class="row1">
+          <div class="column1 left2">
+            <!-- dynamic slide content start -->
+            <audio controls src="Client - QQ Clustered.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+          </div>
+          <div class="column1 right2">
+            <p><span class="blue">Client:</span> Multiple questions asked at once (confuses the Customer)</p>
+            <!-- dynamic slide content end-->
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Slide 3 End-->
+
+<!-- Slide 4 Start -->
+    <div class="row">
+      <div class="column left">
+        <h2 class="headerBlack">4</h2>
+      </div>
+      <div class="column right slide4">
+        <div class="row1">
+          <div class="column1 leftS4">
+            <!-- dynamic slide content start -->
+            <audio controls src="Comp - Reco Droplist.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+          </div>
+          <div class="column1 rightS4">
+            <p><span class="red">Comp:</span> Present every plan available (no recommendation)</p>
+            <!-- dynamic slide content end-->
+          </div>
+        </div>
+        <div class="row1">
+          <div class="column1 left2">
+            <!-- dynamic slide content start -->
+            <audio controls src="Client - Reco Needs Devices.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+          </div>
+          <div class="column1 right2">
+            <p><span class="blue">Client:</span> About number of devices
+</p>
+            <!-- dynamic slide content end-->
+          </div>
+        </div>
+        <div class="row1">
+          <div class="column1 left2">
+            <!-- dynamic slide content start -->
+            <audio controls src="Client - Reco This or That.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+          </div>
+          <div class="column1 right2">
+            <p><span class="blue">Client:</span> Provide second cheaper option (increases AHT; confuses the Customer)</p>
+            <!-- dynamic slide content end-->
+          </div>
+        </div>
+
+        <!-- hide blue box content for after
+        <div class="rowBorder">
+          <div class="column1 left3">
+
+            <audio controls src="MTA Post Launch Reco.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+          </div>
+          <div class="column1 right3">
+            <p><span class="MTABlue">MTA After Our New Recommendation Launch (as of July 10th):</span> <br />&quot;I recommend the Plus Unlimited Plan which is $128.99/mo. I would pair that with our totalWifi service, based on you guys having multiple streamers in the household&quot; <br />(One recommendation; based on Customer's needs; includes totalWifi)</p>
+
+          </div>
+        </div>
+      end blue box content for after-->
+      </div>
+    </div>
+<!-- Slide 4 End-->
+
+<!-- Slide 5 Start -->
+    <div class="row">
+      <div class="column left">
+        <h2 class="headerBlack">5</h2>
+      </div>
+      <div class="column right slide5">
+        <div class="row1">
+          <div class="column1 leftS5">
+            <!-- dynamic slide content start -->
+            <audio controls src="Comp - Ask Trial.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+
+          </div>
+          <div class="column1 rightS5">
+
+              <p><span class="red">Comp:</span> Trial ask (if the Customer answers positively, they have not agreed to buy)</p>
+            <!-- dynamic slide content end-->
+          </div>
+        </div>
+        <div class="row1">
+          <div class="column1 left2">
+            <!-- dynamic slide content start -->
+            <audio controls src="Client - Ask Direct.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+          </div>
+          <div class="column1 right2">
+            <p><span class="blue">Client:</span> Direct yes or no question</p>
+            <!-- dynamic slide content end-->
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+<!-- Slide 5 End-->
+
+<!-- Slide 6 Start -->
+    <div class="row">
+      <div class="column left">
+        <h2 class="headerBlack">6</h2>
+      </div>
+      <div class="column right slide6">
+        <div class="row1">
+          <div class="column1 leftS6">
+            <!-- dynamic slide content start -->
+            <audio controls src="Client - Cross Sell Total Wifi.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+          </div>
+          <div class="column1 rightS6">
+              <p><span class="blue">Client:</span> Assumptively included in recommendation (opportunity to clarify what a &quot;router service&quot; is)</p>
+            <!-- dynamic slide content end-->
+          </div>
+        </div>
+
+
+
+        </div>
+      </div>
+    </div>
+<!-- Slide 6 End-->
+
+<!-- Slide 7 Start -->
+    <div class="row">
+      <div class="column left">
+        <h2 class="headerBlack">7</h2>
+      </div>
+      <div class="column right">
+            <img src="Slides/Slide7.png" alt="">
+      </div>
+    </div>
+<!-- Slide 7 End -->
+
+<!-- Slide 8 Start -->
+    <div class="row">
+      <div class="column left">
+        <h2 class="headerBlack">8</h2>
+      </div>
+      <div class="column right">
+            <img src="Slides/Slide8.png" alt="">
+      </div>
+    </div>
+<!-- Slide 8 End -->
+
+<!-- Slide 9 Start -->
+    <div class="row" id="demos">
+      <div class="column left">
+        <h2 class="headerBlack">9</h2>
+      </div>
+      <div class="column right slide9">
+        <div class="row2">
+          <div class="column1 leftS9"><a href="Tactic1.html">Demo</a></div>
+          <div class="column1 centerS9"><a href="Tactic2.html">Demo</a></div>
+          <div class="column1 rightS9"><a href="Tactic3.html">Demo</a></div>
+        </div>
+
+      </div>
+    </div>
+<!-- Slide 9 End-->
+
+
+<!-- Slide 10 Start -->
+    <div class="row">
+      <div class="column left">
+        <h2 class="headerBlack">10</h2>
+      </div>
+      <div class="column right slide10">
+        <div class="row1">
+          <div class="column1 leftS10">
+            <!-- dynamic slide content start -->
+            <audio controls src="ClientRecommend-Before.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+
+          </div>
+          <div class="column1 rightS10">
+
+              <p><span class="red">Client Before Program:</span> Two options; based on # of people; no router service cross-sell</p>
+            <!-- dynamic slide content end-->
+          </div>
+        </div>
+        <div class="row1">
+          <div class="column1 left9">
+            <!-- dynamic slide content start -->
+            <audio controls src="ClientRecommend-After.wav">
+              Your browser does not support the
+              <code>audio</code> element.
+              <p>Your browser doesn't support HTML5 audio.</p>
+            </audio>
+          </div>
+          <div class="column1 right9">
+            <p><span class="blue">Client During Program:</span> One recommendation; based on Customer need; includes router service</p>
+            <!-- dynamic slide content end-->
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+<!-- Slide 10 End-->
+
+
+
+  </div>
+</body>
+
+</html>
